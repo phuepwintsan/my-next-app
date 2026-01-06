@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,16 +9,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {/* Brand */}
-        {/* <div>
-          <h3 className="text-xl font-semibold mb-4">ThaisGolf</h3>
+        <div>
+          <h3 className="text-xl font-semibold mb-4">ThaisTour</h3>
           <p className="text-sm text-white/80 leading-relaxed">
-            Top #1 Golf Booking Service in Thailand. <br />
+            Top #1 Tour Booking Service in Thailand. <br />
             Book premium courses with ease and local support.
           </p>
-        </div> */}
+        </div>
 
         {/* Quick Links */}
-        {/* <div>
+        <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li><Link href="#">Home</Link></li>
@@ -28,36 +29,48 @@ export default function Footer() {
             <li><Link href="#">Contact Us</Link></li>
             <li><Link href="#">About Us</Link></li>
           </ul>
-        </div> */}
+        </div>
 
         {/* Services */}
-        {/* <div>
+        <div>
           <h4 className="font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li>Membership</li>
             <li>Partner</li>
           </ul>
-        </div> */}
+        </div>
 
         {/* Contact */}
-        {/* <div>
+        <div>
           <h4 className="font-semibold mb-4">Connect With Us</h4>
           <p className="text-sm text-white/80 mb-6">
-            Email: info@thaisgolf.com
-          </p> */}
+            Email: ThaiSTour.com
+          </p>
 
-          {/* QR placeholders */}
-          {/* <div className="flex gap-4">
-            {["Line QR", "WeChat QR", "WhatsApp"].map((label, i) => (
+          {/* QR Images */}
+          <div className="flex gap-4">
+            {[
+              { src: "/qr_line.png", label: "Line QR" },
+              { src: "/qr_wechat.png", label: "WeChat QR" },
+              { src: "/qr_whatsapp.png", label: "WhatsApp" },
+            ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-20 h-20 bg-white rounded-md flex items-center justify-center text-xs text-gray-400">
-                  QR
+                <div className="w-20 h-20 bg-white rounded-md overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={item.src}
+                    alt={item.label}
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
                 </div>
-                <p className="mt-2 text-xs text-white/80">{label}</p>
+                <p className="mt-2 text-xs text-white/80">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
 
       </div>
 
@@ -66,7 +79,7 @@ export default function Footer() {
 
       {/* Bottom footer */}
       <div className="py-6 text-center text-sm text-white/80">
-        © 2025 ThaisTravel. All rights reserved.
+        © 2025 ThaiSGolf. All rights reserved.
       </div>
 
     </footer>
