@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-export default function Navbar() {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (

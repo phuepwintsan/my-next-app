@@ -1,17 +1,17 @@
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import HeroBanner from "./components/HeroBanner";
 import Explore from "./components/Explore";
-import Choosen from "./components/Chosen";
+import Chosen from "./components/Chosen";
 import Review from "./components/Review";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
-   <Navbar/>
+   <NavBar/>
    <HeroBanner/>
    <Explore/>
-   <Choosen />
+   <Chosen />
    <Review />
    <Footer />
     </>
