@@ -32,15 +32,17 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-white shadow-md">
+      <nav className="bg-gray-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
 
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-10 h-10 border rounded-full flex items-center justify-center font-bold text-black">
-                Logo
-              </div>
+              <Image src="/logo_Tour.jpg" alt="dropdown" width={108} height={108} />
+              {/* Brand Name */}
+              {/* <span className="text-xl font-semibold text-black tracking-wide">
+                ThaiSGolf
+              </span> */}
             </div>
 
             {/* Desktop Menu */}
@@ -51,7 +53,7 @@ export default function Navbar() {
               </Link>
               <Link href="/transportation" className="hover:text-blue-600 text-black flex items-center">Transportation Service</Link>
               <Link href="/gallery" className="hover:text-blue-600 text-black flex items-center">Review & Gallery</Link>
-              <Link href="/about us" className="hover:text-blue-600 text-black flex items-center">About Us</Link>
+              <Link href="/about-us" className="hover:text-blue-600 text-black flex items-center">About Us</Link>
             </div>
 
             {/* Right Menu */}

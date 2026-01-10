@@ -79,7 +79,7 @@ export default function Footer() {
 
       {/* Bottom footer */}
       <div className="py-6 text-center text-sm text-white/80">
-        © 2025 ThaiSGolf. All rights reserved.
+        © 2025 ThaiSTour. All rights reserved.
       </div>
 
     </footer>
