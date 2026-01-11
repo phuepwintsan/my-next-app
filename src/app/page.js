@@ -1,9 +1,9 @@
-import NavBar from "./components/NavBar";
-import HeroBanner from "./components/HeroBanner";
-import Explore from "./components/Explore";
-import Chosen from "./components/Chosen";
-import Review from "./components/Review";
-import Footer from "./components/Footer";
+import NavBar from "./components/navBar";
+import HeroBanner from "./components/heroBanner";
+import Explore from "./components/explore";
+import Chosen from "./components/chosen";
+import Review from "./components/review";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
