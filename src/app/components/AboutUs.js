@@ -24,7 +24,7 @@ export default function AboutUsPage() {
                         </p>
 
                         <a
-                            href="/contact"
+                            href="/contact-us"
                             className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition"
                         >
                             CONTACT NOW
