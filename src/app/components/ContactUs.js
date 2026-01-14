@@ -68,7 +68,7 @@ export default function ContactPage() {
                                 value={[
                                     "Hotline support",
                                     "Email response within 24 hrs",
-                                    "LINE / WhatsApp available",
+                                    "LINE,WhatsApp,WeChat available",
                                 ]}
                                 image="headset.svg"
                             />
