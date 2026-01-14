@@ -91,8 +91,19 @@ export default function NavBar() {
             <Link href="/services" className="text-black hover:text-blue-600 flex items-center">Our Services <Image src="/dropdown.svg" alt="dropdown" width={30} height={30} /></Link>
             <Link href="/transportation" className="block text-black hover:text-blue-600">Transportation Service</Link>
             <Link href="/gallery" className="block text-black hover:text-blue-600">Review & Gallery</Link>
+            <Link href="/about-us" className="block text-black hover:text-blue-600">About Us</Link>
             <Link href="/register" className="block text-black hover:text-blue-600">Member Registration</Link>
-            <Link href="/contact" className="block text-black hover:text-blue-600">About Us & Contact Us</Link>
+            <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center 
+             bg-green-500 hover:bg-green-600 
+             text-white font-semibold 
+             px-6 py-2.5 rounded-lg 
+             shadow-md hover:shadow-lg 
+             transition duration-300"
+              >
+                Contact Us
+              </Link>
           </div>
         )}
       </nav>
