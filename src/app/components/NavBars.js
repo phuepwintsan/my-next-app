@@ -62,7 +62,7 @@ export default function NavBar() {
                 Member Registration
               </Link>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center justify-center 
              bg-green-500 hover:bg-green-600 
              text-white font-semibold 
