@@ -15,7 +15,6 @@ export default function NavBar() {
       <div className="w-full bg-black px-6 py-2 text-[12px] text-white">
         <div className="flex items-center justify-end gap-4">
           <span className="opacity-80">Contact with us:</span>
-
           <div className="flex items-center gap-3">
             {["whatsapp", "line", "wechat"].map((item) => (
               <a
@@ -29,8 +28,8 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Main Navbar */}
-      <nav className="bg-gray-50 shadow-sm">
+      {/* Main Navbar (Sticky for mobile) */}
+      <nav className="sticky top-0 z-50 bg-gray-50 shadow-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
@@ -93,49 +92,68 @@ export default function NavBar() {
               </Link>
             </div>
 
-            {/* Mobile Button */}
-            <button className="md:hidden" onClick={() => setOpen(!open)}>
-              <Image src="/3line.svg" alt="menu" width={28} height={28} />
+            {/* Mobile Toggle */}
+            <button
+              className="md:hidden"
+              onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
+            >
+              {open ? (
+                <span className="text-2xl font-semibold">×</span>
+              ) : (
+                <Image src="/3line.svg" alt="menu" width={28} height={28} />
+              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-white px-4 pb-4 space-y-2 text-[14px] font-medium">
-            <NavLink href="/" pathname={pathname}>
-              Home
-            </NavLink>
-            <NavLink href="/services" pathname={pathname}>
-              Our Services
-            </NavLink>
-            <NavLink href="/transportation" pathname={pathname}>
-              Transportation Service
-            </NavLink>
-            <NavLink href="/gallery" pathname={pathname}>
-              Review & Gallery
-            </NavLink>
-            <NavLink href="/about-us" pathname={pathname}>
-              About Us
-            </NavLink>
-            <NavLink href="/register" pathname={pathname}>
-              Member Registration
-            </NavLink>
+  <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3">
 
-            <Link
-              href="/contact-us"
-              className="mt-3 inline-flex w-full justify-center rounded-lg bg-green-500 px-6 py-2.5 text-[14px] font-semibold text-white hover:bg-green-600"
-            >
-              Contact Us
-            </Link>
-          </div>
-        )}
+    <MobileNavLink href="/" pathname={pathname} onClick={() => setOpen(false)}>
+      Home
+    </MobileNavLink>
+
+    <MobileNavLink href="/services" pathname={pathname} onClick={() => setOpen(false)}>
+      Our Services
+    </MobileNavLink>
+
+    <MobileNavLink href="/transportation" pathname={pathname} onClick={() => setOpen(false)}>
+      Transportation Service
+    </MobileNavLink>
+
+    <MobileNavLink href="/gallery" pathname={pathname} onClick={() => setOpen(false)}>
+      Review & Gallery
+    </MobileNavLink>
+
+    <MobileNavLink href="/about-us" pathname={pathname} onClick={() => setOpen(false)}>
+      About Us
+    </MobileNavLink>
+
+    <MobileNavLink href="/register" pathname={pathname} onClick={() => setOpen(false)}>
+      Member Registration
+    </MobileNavLink>
+
+    {/* CTA */}
+    <Link
+      href="/contact-us"
+      onClick={() => setOpen(false)}
+      className="mt-4 flex w-full justify-center rounded-lg
+                 bg-green-500 py-3 text-[15px]
+                 font-semibold text-white hover:bg-green-600"
+    >
+      Contact Us
+    </Link>
+  </div>
+)}
+
       </nav>
     </>
   );
 }
 
-/* Reusable Nav Link with Active + Hover underline */
+/* Desktop Nav Link */
 function NavLink({ href, pathname, children }) {
   const isActive = pathname === href;
 
@@ -155,8 +173,6 @@ function NavLink({ href, pathname, children }) {
   );
 }
 
-
-/* Subtle underline component */
 function Underline() {
   return (
     <span
@@ -166,5 +182,26 @@ function Underline() {
         group-hover:w-full
       "
     />
+  );
+}
+
+function MobileNavLink({ href, pathname, children, onClick }) {
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`
+        block py-2 text-[15px] transition
+        ${
+          isActive
+            ? "text-blue-600 font-semibold"
+            : "text-gray-800 hover:text-blue-600"
+        }
+      `}
+    >
+      {children}
+    </Link>
   );
 }
