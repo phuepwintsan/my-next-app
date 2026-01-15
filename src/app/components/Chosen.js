@@ -3,45 +3,58 @@ import Image from "next/image";
 const reasons = [
   {
     title: "Professional Local DMC",
-    desc: "Based in Thailand, trusted operations",
+    desc: "Based in Thailand with trusted local operations",
     icon: "briefcase.svg",
   },
   {
     title: "Language Support",
-    desc: "Chinese & English speaking team",
+    desc: "Chinese & English speaking professional team",
     icon: "language.svg",
   },
   {
     title: "Full Coverage",
-    desc: "Bangkok, Chiang Mai, Phuket & more",
+    desc: "Bangkok, Chiang Mai, Phuket & nationwide",
     icon: "map.svg",
   },
   {
     title: "Reliable Services",
-    desc: "Transport & golf arrangements",
+    desc: "Transportation & golf arrangements you can trust",
     icon: "customer.svg",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
           {/* LEFT CONTENT */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Why Choose Us ?
+            <h2 className="mb-14 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
+              Why Choose Us
             </h2>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {reasons.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-5 bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+                  className="
+                    group flex items-start gap-6
+                    rounded-2xl border border-gray-100
+                    bg-gray-50 px-7 py-6
+                    transition
+                    hover:-translate-y-0.5 hover:shadow-md
+                  "
                 >
-                  <div className="w-11 h-11 flex items-center justify-center bg-white rounded-xl shadow">
+                  {/* Icon */}
+                  <div
+                    className="
+                      flex h-12 w-12 items-center justify-center
+                      rounded-xl bg-white shadow-sm
+                      transition group-hover:shadow
+                    "
+                  >
                     <Image
                       src={`/${item.icon}`}
                       alt={item.title}
@@ -50,11 +63,12 @@ export default function WhyChooseUs() {
                     />
                   </div>
 
+                  {/* Text */}
                   <div>
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="text-base font-semibold text-gray-900">
                       {item.title}
                     </h4>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="mt-1 text-sm leading-relaxed text-gray-600">
                       {item.desc}
                     </p>
                   </div>
@@ -63,11 +77,10 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* RIGHT MAP (FULL SIZE) */}
+          {/* RIGHT MAP */}
           <div className="relative flex justify-center">
             <div className="relative w-full max-w-md md:max-w-lg">
 
-              {/* Thailand Map */}
               <Image
                 src="/map.jpg"
                 alt="Thailand Map"
@@ -77,28 +90,28 @@ export default function WhyChooseUs() {
               />
 
               {/* Chiang Mai */}
-              <div className="absolute top-[18%] left-[52%] flex items-center gap-2">
-                <span className="w-3 h-3 bg-blue-600 rounded-full"></span>
-                <span className="text-sm font-medium text-gray-800">
-                  Chiang Mai
-                </span>
-              </div>
+              <MapPin
+                top="18%"
+                left="52%"
+                color="bg-blue-600"
+                label="Chiang Mai"
+              />
 
               {/* Bangkok */}
-              <div className="absolute top-[42%] left-[55%] flex items-center gap-2">
-                <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-                <span className="text-sm font-medium text-gray-800">
-                  Bangkok
-                </span>
-              </div>
+              <MapPin
+                top="42%"
+                left="55%"
+                color="bg-red-500"
+                label="Bangkok"
+              />
 
               {/* Phuket */}
-              <div className="absolute bottom-[18%] left-[48%] flex items-center gap-2">
-                <span className="w-3 h-3 bg-gray-700 rounded-full"></span>
-                <span className="text-sm font-medium text-gray-800">
-                  Phuket
-                </span>
-              </div>
+              <MapPin
+                top="78%"
+                left="48%"
+                color="bg-gray-700"
+                label="Phuket"
+              />
 
             </div>
           </div>
@@ -106,5 +119,20 @@ export default function WhyChooseUs() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* Map pin component */
+function MapPin({ top, left, color, label }) {
+  return (
+    <div
+      className="absolute flex items-center gap-2"
+      style={{ top, left }}
+    >
+      <span className={`h-3 w-3 rounded-full ${color}`} />
+      <span className="text-sm font-medium text-gray-800">
+        {label}
+      </span>
+    </div>
   );
 }

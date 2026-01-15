@@ -30,52 +30,64 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
 
         {/* Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
             Explore Our Services
           </h2>
-          <p className="text-gray-500 mt-3">
-            Complete services. Seamless Planning. Smooth journeys.
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-500 md:text-base">
+            Complete services. Seamless planning. Smooth journeys across Thailand.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((item, index) => (
             <div
               key={index}
-              className="rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition bg-white"
+              className="
+                group overflow-hidden rounded-2xl border border-gray-100
+                bg-white transition
+                hover:-translate-y-1 hover:shadow-xl
+              "
             >
               {/* Image */}
-              <div className="relative h-56">
+              <div className="relative h-56 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="
+                    object-cover transition-transform duration-500
+                    group-hover:scale-105
+                  "
                 />
               </div>
 
-              {/* White Content Area (LIKE FIRST FIGURE) */}
-              <div className="p-5">
+              {/* Content */}
+              <div className="px-6 py-6">
                 <h3 className="text-lg font-semibold text-gray-900">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 mt-1">
-                  {item.location}
-                </p>
-
-                <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
                   {item.desc}
                 </p>
 
-                <button className="mt-4 inline-block bg-green-600 text-white text-sm px-4 py-2 rounded-md hover:bg-green-700 transition">
+                <button
+                  className="
+                    mt-6 inline-flex items-center
+                    text-sm font-medium text-green-600
+                    transition hover:text-green-700
+                  "
+                >
                   View Details
+                  <span className="ml-1 transition group-hover:translate-x-1">
+                    →
+                  </span>
                 </button>
               </div>
             </div>
