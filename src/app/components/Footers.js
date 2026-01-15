@@ -21,13 +21,13 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-white/80">
-            <li><Link href="#">Home</Link></li>
-            <li><Link href="#">Membership</Link></li>
-            <li><Link href="#">Partner</Link></li>
-            <li><Link href="#">Policy</Link></li>
-            <li><Link href="#">Terms</Link></li>
-            <li><Link href="#">Contact Us</Link></li>
-            <li><Link href="#">About Us</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="#">Our Services</Link></li>
+            <li><Link href="#">Transportation Service</Link></li>
+            <li><Link href="#">Review & Gallery</Link></li>
+            <li><Link href="/about-us">About Us</Link></li>
+            <li><Link href="#">Member Registration</Link></li>
+            <li><Link href="/contact-us">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Connect With Us</h4>
           <p className="text-sm text-white/80 mb-6">
-            Email: ThaiSTour.com
+            Email: info@thaistour.com
           </p>
 
           {/* QR Images */}

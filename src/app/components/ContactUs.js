@@ -59,7 +59,7 @@ export default function ContactPage() {
 
                             <InfoCard
                                 title="EMAIL"
-                                value={{ text: "ThaiSTour.com", href: "mailto:ThaiSTour.com" }}
+                                value={{ text: "info@thaistour.com", href: "mailto:info@thaistour.com" }}
                                 image="email.svg"
                             />
 
