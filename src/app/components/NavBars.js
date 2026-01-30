@@ -30,121 +30,86 @@ export default function NavBar() {
 
       {/* Main Navbar (Sticky for mobile) */}
       <nav className="sticky top-0 z-50 bg-gray-50 shadow-sm">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex h-16 items-center justify-between">
-            {/* Logo */}
+  <div className="mx-auto max-w-6xl px-4">
+    <div className="flex h-16 items-center">
+
+      {/* LEFT: Logo + Menu */}
+      <div className="flex items-center gap-10">
+        {/* Logo */}
+        <Image
+          src="/logo.jpg"
+          alt="Logo"
+          width={130}
+          height={50}
+          className="object-contain"
+        />
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-6 text-[14px] font-medium tracking-wide">
+          <NavLink href="/" pathname={pathname}>
+            Home
+          </NavLink>
+
+          <Link
+            href="/services"
+            className={`group relative flex items-center gap-1 transition
+              ${
+                pathname === "/services"
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-800 hover:text-blue-600"
+              }`}
+          >
+            Our Services
             <Image
-              src="/logo.jpg"
-              alt="Logo"
-              width={140}
-              height={55}
-              className="object-contain"
+              src="/dropdown.svg"
+              alt=""
+              width={14}
+              height={14}
+              className="transition-transform duration-200 group-hover:rotate-180"
             />
+            <Underline />
+          </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-6 text-[14px] font-medium tracking-wide">
-              <NavLink href="/" pathname={pathname}>
-                Home
-              </NavLink>
+          <NavLink href="/gallery" pathname={pathname}>
+            Gallery
+          </NavLink>
 
-              <Link
-                href="/services"
-                className={`group relative flex items-center gap-1 transition
-                  ${
-                    pathname === "/services"
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-800 hover:text-blue-600"
-                  }`}
-              >
-                Our Services
-                <Image
-                  src="/dropdown.svg"
-                  alt=""
-                  width={14}
-                  height={14}
-                  className="transition-transform duration-200 group-hover:rotate-180"
-                />
-                <Underline />
-              </Link>
-              <NavLink href="/gallery" pathname={pathname}>
-                Gallery
-              </NavLink>
-              <NavLink href="/about-us" pathname={pathname}>
-                About Us
-              </NavLink>
-            </div>
-
-            {/* Right Menu */}
-            <div className="hidden md:flex items-center space-x-5 text-[14px] font-medium tracking-wide">
-              <NavLink href="/register" pathname={pathname}>
-                Member Registration
-              </NavLink>
-
-              <Link
-                href="/contact-us"
-                className="rounded-lg bg-green-500 px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-green-600"
-              >
-                Contact Us
-              </Link>
-            </div>
-
-            {/* Mobile Toggle */}
-            <button
-              className="md:hidden"
-              onClick={() => setOpen(!open)}
-              aria-label="Toggle menu"
-            >
-              {open ? (
-                <span className="text-2xl font-semibold">×</span>
-              ) : (
-                <Image src="/3line.svg" alt="menu" width={28} height={28} />
-              )}
-            </button>
-          </div>
+          <NavLink href="/about-us" pathname={pathname}>
+            About Us
+          </NavLink>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {open && (
-  <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3">
+      {/* RIGHT: CTA */}
+      <div className="ml-auto hidden md:flex items-center gap-5 text-[14px] font-medium">
+        <NavLink href="/register" pathname={pathname}>
+          Member Registration
+        </NavLink>
 
-    <MobileNavLink href="/" pathname={pathname} onClick={() => setOpen(false)}>
-      Home
-    </MobileNavLink>
+        <Link
+          href="/contact-us"
+          className="rounded-lg bg-green-500 px-6 py-2.5 font-semibold text-white transition hover:bg-green-600"
+        >
+          Contact Us
+        </Link>
+      </div>
 
-    <MobileNavLink href="/services" pathname={pathname} onClick={() => setOpen(false)}>
-      Our Services
-    </MobileNavLink>
-
-    <MobileNavLink href="/transportation" pathname={pathname} onClick={() => setOpen(false)}>
-      Transportation Service
-    </MobileNavLink>
-
-    <MobileNavLink href="/gallery" pathname={pathname} onClick={() => setOpen(false)}>
-      Review & Gallery
-    </MobileNavLink>
-
-    <MobileNavLink href="/about-us" pathname={pathname} onClick={() => setOpen(false)}>
-      About Us
-    </MobileNavLink>
-
-    <MobileNavLink href="/register" pathname={pathname} onClick={() => setOpen(false)}>
-      Member Registration
-    </MobileNavLink>
-
-    {/* CTA */}
-    <Link
-      href="/contact-us"
-      onClick={() => setOpen(false)}
-      className="mt-4 flex w-full justify-center rounded-lg
-                 bg-green-500 py-3 text-[15px]
-                 font-semibold text-white hover:bg-green-600"
-    >
-      Contact Us
-    </Link>
+      {/* Mobile Toggle */}
+      <button
+        className="ml-auto md:hidden"
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
+      >
+        {open ? (
+          <span className="text-2xl font-semibold">×</span>
+        ) : (
+          <Image src="/3line.svg" alt="menu" width={28} height={28} />
+        )}
+      </button>
+    </div>
   </div>
-)}
+</nav>
 
-      </nav>
     </>
   );
 }
