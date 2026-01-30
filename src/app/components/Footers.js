@@ -28,8 +28,7 @@ export default function Footer() {
             {[
               { name: "Home", href: "/" },
               { name: "Our Services", href: "#" },
-              { name: "Transportation Service", href: "#" },
-              { name: "Review & Gallery", href: "#" },
+              { name: "Gallery", href: "/gallery" },
               { name: "About Us", href: "/about-us" },
               { name: "Member Registration", href: "#" },
               { name: "Contact Us", href: "/contact-us" },
