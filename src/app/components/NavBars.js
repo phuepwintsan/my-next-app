@@ -30,11 +30,11 @@ export default function NavBar() {
 
       {/* Main Navbar (Sticky for mobile) */}
       <nav className="sticky top-0 z-50 bg-gray-50 shadow-sm">
-  <div className="mx-auto max-w-6xl px-4">
-    <div className="flex h-16 items-center">
+  <div className="mx-auto max-w-6xl px-6">
+    <div className="flex h-20 items-center">
 
       {/* LEFT: Logo + Menu */}
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-28">
         {/* Logo */}
         <Image
           src="/logo_Eng.jpg"
@@ -45,14 +45,13 @@ export default function NavBar() {
         />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6 text-[14px] font-medium tracking-wide">
+        <div className="hidden md:flex items-center gap-8 text-[14px]  tracking-wide font-semibold">
           <NavLink href="/" pathname={pathname}>
             Home
           </NavLink>
 
-            <ServicesDropdown pathname={pathname} />
+          <ServicesDropdown pathname={pathname} />
             <Underline />
-
 
           <NavLink href="/gallery" pathname={pathname}>
             Gallery
@@ -65,7 +64,7 @@ export default function NavBar() {
       </div>
 
       {/* RIGHT: CTA */}
-      <div className="ml-auto hidden md:flex items-center gap-5 text-[14px] font-medium">
+      <div className="ml-auto hidden md:flex items-center gap-6 pr-1 text-[14px] font-semibold">
         <NavLink href="/register" pathname={pathname}>
           Member Registration
         </NavLink>
@@ -92,8 +91,44 @@ export default function NavBar() {
       </button>
     </div>
   </div>
-</nav>
+  {/* Mobile Menu */}
+        {open && (
+  <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3">
 
+    <MobileNavLink href="/" pathname={pathname} onClick={() => setOpen(false)}>
+      Home
+    </MobileNavLink>
+
+    <MobileNavLink href="/services" pathname={pathname} onClick={() => setOpen(false)}>
+      Our Services
+    </MobileNavLink>
+
+    <MobileNavLink href="/gallery" pathname={pathname} onClick={() => setOpen(false)}>
+Gallery
+    </MobileNavLink>
+
+    <MobileNavLink href="/about-us" pathname={pathname} onClick={() => setOpen(false)}>
+      About Us
+    </MobileNavLink>
+
+    <MobileNavLink href="/register" pathname={pathname} onClick={() => setOpen(false)}>
+      Member Registration
+    </MobileNavLink>
+
+    {/* CTA */}
+    <Link
+      href="/contact-us"
+      onClick={() => setOpen(false)}
+      className="mt-4 flex w-full justify-center rounded-lg
+                 bg-green-500 py-3 text-[15px]
+                 font-semibold text-white hover:bg-green-600"
+    >
+      Contact Us
+    </Link>
+  </div>
+)}
+
+      </nav>
     </>
   );
 }
@@ -159,7 +194,7 @@ function ServicesDropdown({ pathname }) {
         className={`group relative flex items-center gap-1 cursor-pointer transition
           ${
             pathname.startsWith("/services")
-              ? "text-blue-600 font-semibold"
+              ? "text-blue-600 font-medium"
               : "text-gray-800 hover:text-blue-600"
           }`}
       >
@@ -189,6 +224,7 @@ function ServicesDropdown({ pathname }) {
           group-hover:translate-y-0
           transition-all duration-200
           z-50
+          font-medium
         "
       >
         <ul className="py-2 text-[14px]">
@@ -235,4 +271,3 @@ function ServiceItem({ href, children }) {
     </li>
   );
 }
-
