@@ -34,10 +34,10 @@ export default function NavBar() {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Image
-              src="/logo_Tour.jpg"
+              src="/logo.jpg"
               alt="Logo"
-              width={100}
-              height={40}
+              width={140}
+              height={55}
               className="object-contain"
             />
 
@@ -66,12 +66,8 @@ export default function NavBar() {
                 />
                 <Underline />
               </Link>
-
-              <NavLink href="/transportation" pathname={pathname}>
-                Transportation Service
-              </NavLink>
               <NavLink href="/gallery" pathname={pathname}>
-                Review & Gallery
+                Gallery
               </NavLink>
               <NavLink href="/about-us" pathname={pathname}>
                 About Us
