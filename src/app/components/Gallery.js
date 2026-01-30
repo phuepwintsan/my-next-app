@@ -43,28 +43,48 @@ export default function Gallery() {
 
   return (
     <section className="w-full pt-6 pb-20 px-4 md:px-8 lg:px-14">
+
       {/* ===== HEADER ===== */}
       <div className="text-center mb-8">
-        <h1 className="text-2xl md:text-3xl font-semibold text-gray-900">
+        <h1 className="
+          text-2xl md:text-3xl
+          font-heading font-semibold
+          tracking-tight
+          text-gray-900
+        ">
           Gallery
         </h1>
-        <p className="mt-2 text-sm md:text-base text-gray-500">
+
+        <p className="
+          mt-2
+          text-sm md:text-base
+          font-body
+          text-gray-500
+        ">
           Discover Luxury Tours, Golf & Transportation
         </p>
       </div>
 
-      {/* ===== FILTER (HORIZONTAL SCROLL ON MOBILE) ===== */}
+      {/* ===== FILTER ===== */}
       <div className="mb-8">
         <div className="flex justify-center gap-1 sm:gap-2">
           {categories.map((item) => (
             <button
               key={item}
               onClick={() => setActive(item)}
-              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition
-          ${active === item
-                  ? "bg-green-600 text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
+              className={`
+                px-4 sm:px-5 py-2
+                rounded-full
+                text-xs sm:text-sm
+                font-body font-medium
+                tracking-wide
+                transition
+                ${
+                  active === item
+                    ? "bg-green-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }
+              `}
             >
               {item}
             </button>
@@ -72,9 +92,7 @@ export default function Gallery() {
         </div>
       </div>
 
-
-
-      {/* ===== GRID (DESKTOP LOGIC, MOBILE SIMPLE) ===== */}
+      {/* ===== GRID ===== */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {filtered.map((item, index) => (
           <Card
@@ -85,7 +103,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* ===== FULLSCREEN MODAL ===== */}
+      {/* ===== MODAL ===== */}
       {modal && (
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
@@ -98,7 +116,14 @@ export default function Gallery() {
               fill
               className="object-contain rounded-xl"
             />
-            <p className="absolute bottom-4 left-4 text-white text-sm font-semibold">
+
+            <p className="
+              absolute bottom-4 left-4
+              text-white
+              text-sm
+              font-body font-medium
+              tracking-wide
+            ">
               {modal.title}
             </p>
           </div>
@@ -114,18 +139,45 @@ function Card({ image, onClick }) {
   return (
     <div
       onClick={onClick}
-      className="relative aspect-[4/5] md:aspect-[16/10] overflow-hidden rounded-2xl bg-black group cursor-pointer"
+      className="
+        relative
+        aspect-[4/5] md:aspect-[16/10]
+        overflow-hidden
+        rounded-2xl
+        bg-black
+        group
+        cursor-pointer
+      "
     >
       <Image
         src={image.src}
         alt={image.title}
         fill
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        className="
+          object-cover
+          transition-transform
+          duration-700
+          ease-out
+          group-hover:scale-105
+        "
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-end">
-        <div className="p-3 text-white text-sm font-semibold">
+      {/* OVERLAY */}
+      <div className="
+        absolute inset-0
+        bg-gradient-to-t from-black/70 via-black/30 to-transparent
+        opacity-0
+        group-hover:opacity-100
+        transition duration-500
+        flex items-end
+      ">
+        <div className="
+          p-3
+          text-white
+          text-sm
+          font-body font-medium
+          leading-snug
+        ">
           {image.title}
         </div>
       </div>
