@@ -37,7 +37,7 @@ export default function NavBar() {
       <div className="flex items-center gap-10">
         {/* Logo */}
         <Image
-          src="/logo.jpg"
+          src="/logo_Eng.jpg"
           alt="Logo"
           width={130}
           height={50}
@@ -50,25 +50,9 @@ export default function NavBar() {
             Home
           </NavLink>
 
-          <Link
-            href="/services"
-            className={`group relative flex items-center gap-1 transition
-              ${
-                pathname === "/services"
-                  ? "text-blue-600 font-semibold"
-                  : "text-gray-800 hover:text-blue-600"
-              }`}
-          >
-            Our Services
-            <Image
-              src="/dropdown.svg"
-              alt=""
-              width={14}
-              height={14}
-              className="transition-transform duration-200 group-hover:rotate-180"
-            />
+            <ServicesDropdown pathname={pathname} />
             <Underline />
-          </Link>
+
 
           <NavLink href="/gallery" pathname={pathname}>
             Gallery
@@ -166,3 +150,89 @@ function MobileNavLink({ href, pathname, children, onClick }) {
     </Link>
   );
 }
+
+function ServicesDropdown({ pathname }) {
+  return (
+    <div className="relative group">
+      {/* Trigger */}
+      <div
+        className={`group relative flex items-center gap-1 cursor-pointer transition
+          ${
+            pathname.startsWith("/services")
+              ? "text-blue-600 font-semibold"
+              : "text-gray-800 hover:text-blue-600"
+          }`}
+      >
+        Our Services
+        <Image
+          src="/dropdown.svg"
+          alt=""
+          width={14}
+          height={14}
+          className="transition-transform duration-200 group-hover:rotate-180"
+        />
+        <Underline />
+      </div>
+
+      {/* Dropdown */}
+      <div
+        className="
+          absolute left-0 top-full mt-3
+          w-80
+          rounded-xl
+          bg-white
+          shadow-xl
+          border border-gray-100
+          opacity-0 invisible translate-y-2
+          group-hover:opacity-100
+          group-hover:visible
+          group-hover:translate-y-0
+          transition-all duration-200
+          z-50
+        "
+      >
+        <ul className="py-2 text-[14px]">
+          <ServiceItem href="/services/customized-thailand-travel">
+            Customized Thailand Travel
+          </ServiceItem>
+
+          <ServiceItem href="/services/golf-tour-solutions">
+            Golf Tour Solutions
+          </ServiceItem>
+
+          <ServiceItem href="/services/mice-corporate-travel">
+            MICE & Corporate Travel Services
+          </ServiceItem>
+
+          <ServiceItem href="/services/transportation-logistics">
+            Transportation & On-ground Logistics
+          </ServiceItem>
+
+          <ServiceItem href="/services/local-coordination">
+            Local Coordination & Supplier Management
+          </ServiceItem>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function ServiceItem({ href, children }) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="
+          block px-5 py-2
+          text-gray-700
+          hover:bg-gray-50
+          hover:text-blue-600
+          transition
+        "
+      >
+        {children}
+      </Link>
+    </li>
+  );
+}
+
