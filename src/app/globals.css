@@ -9,6 +9,10 @@ body {
   font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
+.font-playfair {
+  letter-spacing: -0.01em;
+}
+
 /* Shared input style */
 .input {
   @apply h-12 w-full rounded-lg bg-gray-200 px-4 text-sm text-gray-700

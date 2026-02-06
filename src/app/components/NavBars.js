@@ -228,7 +228,7 @@ function ServicesDropdown({ pathname }) {
         "
       >
         <ul className="py-2 text-[14px]">
-          <ServiceItem href="/services/customized-thailand-travel">
+          <ServiceItem href="/travel-service">
             Customized Thailand Travel
           </ServiceItem>
 
