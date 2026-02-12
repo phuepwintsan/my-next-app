@@ -42,7 +42,7 @@ export default function CustomizedThailandTravel() {
                         Customized Thailand Travel
                     </h1>
 
-                     <div className="mx-auto mt-4 h-[2px] w-12 rounded-full bg-green-500/30" />
+                    <div className="mx-auto mt-4 h-[2px] w-12 rounded-full bg-green-500/30" />
 
                     {/* HERO DESCRIPTION */}
                     <p
@@ -54,14 +54,9 @@ export default function CustomizedThailandTravel() {
                             text-gray-600
                         "
                     >
-                        <span className="font-poppins font-medium text-gray-800">
-                            Tailor-made
-                        </span>{" "}
-                        itineraries covering leisure travel, cultural experiences, and
-                        special interest programs{" "}
-                        <span className="font-poppins font-medium text-gray-800">
-                            across Thailand
-                        </span>.
+                        Tailor-made itineraries covering leisure travel,
+                        cultural experiences, and special interest programs
+                        across Thailand.
                     </p>
                 </div>
             </div>
@@ -102,11 +97,8 @@ export default function CustomizedThailandTravel() {
                         >
                             <Image src="/Num_1.svg" alt="Step 1" width={32} height={32} />
                             <p className="font-inter text-[14px] sm:text-[15px] leading-[1.75] text-gray-700">
-                                <span className="font-poppins font-medium text-gray-900">
-                                    A customized Thailand
-                                </span>{" "}
-                                travel program combining major city highlights, cultural
-                                experiences, and relaxed leisure time.
+                                A customized Thailand travel program combining major city highlights,
+                                cultural experiences, and relaxed leisure time.
                             </p>
                         </div>
 
@@ -140,13 +132,11 @@ export default function CustomizedThailandTravel() {
                         >
                             <Image src="/Num_3.svg" alt="Step 3" width={32} height={32} />
                             <p className="font-inter text-[14px] sm:text-[15px] leading-[1.75] text-gray-700">
-                                <span className="font-poppins font-medium text-gray-900">
-                                    All programs
-                                </span>{" "}
-                                are tailor-made according to market needs, group profile, and
-                                travel objectives.
+                                All programs are tailor-made according to market needs,
+                                group profile, and travel objectives.
                             </p>
                         </div>
+
                     </div>
 
                     {/* RIGHT – Image */}

@@ -240,7 +240,7 @@ function ServicesDropdown({ pathname }) {
             MICE & Corporate Travel Services
           </ServiceItem>
 
-          <ServiceItem href="/services/transportation-logistics">
+          <ServiceItem href="/transportation-service">
             Transportation & On-ground Logistics
           </ServiceItem>
 
