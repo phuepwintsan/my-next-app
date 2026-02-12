@@ -42,7 +42,7 @@ export default function CustomizedThailandTravel() {
                         Customized Thailand Travel
                     </h1>
 
-                    <div className="mx-auto mt-2 h-[2px] w-16 bg-blue-500/20" />
+                     <div className="mx-auto mt-4 h-[2px] w-10 rounded-full bg-green-00/40" />
 
                     {/* HERO DESCRIPTION */}
                     <p

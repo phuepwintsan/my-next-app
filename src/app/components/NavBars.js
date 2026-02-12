@@ -232,7 +232,7 @@ function ServicesDropdown({ pathname }) {
             Customized Thailand Travel
           </ServiceItem>
 
-          <ServiceItem href="/services/golf-tour-solutions">
+          <ServiceItem href="/golf-service">
             Golf Tour Solutions
           </ServiceItem>
 
