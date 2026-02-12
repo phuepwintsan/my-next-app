@@ -46,19 +46,63 @@ export default function Footer() {
         </div>
 
         {/* Services */}
+
+
         <div>
           <h4 className="mb-4 font-semibold tracking-wide">
             Services
           </h4>
+
           <ul className="space-y-2 text-sm text-white/80">
-            <li className="hover:text-lime-300 transition cursor-pointer">
-              Membership
+
+            <li>
+              <Link
+                href="/travel-service"
+                className="hover:text-white/95 transition cursor-pointer block"
+              >
+                Customized Thailand Travel
+              </Link>
             </li>
-            <li className="hover:text-lime-300 transition cursor-pointer">
-              Partner
+
+            <li>
+              <Link
+                href="/golf-service"
+                className="hover:text-white/95 transition cursor-pointer block"
+              >
+                Golf Tour Solutions
+              </Link>
             </li>
+
+            <li>
+              <Link
+                href="/mice-service"
+                className="hover:text-white/95 transition cursor-pointer block"
+              >
+                MICE & Corporate Travel Services
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/transportation-service"
+                className="hover:text-white/95 transition cursor-pointer block"
+              >
+                Transportation & On-ground Logistics
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/local-coordination"
+                className="hover:text-white/95 transition cursor-pointer block"
+              >
+                Local Coordination & Supplier Management
+              </Link>
+            </li>
+
           </ul>
         </div>
+
 
         {/* Contact */}
         <div>
@@ -69,14 +113,14 @@ export default function Footer() {
             Email:{" "}
             <a
               href="mailto:info@thaistour.com"
-              className="hover:text-lime-300 transition"
+              className=" hover:text-white/95 transition"
             >
               info@thaistour.com
             </a>
           </p>
 
           {/* QR Images */}
-         <div className="flex gap-4">
+          <div className="flex gap-4">
             {[
               { src: "/qr_line.png", label: "Line QR" },
               { src: "/qr_wechat.png", label: "WeChat QR" },
