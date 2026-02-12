@@ -154,6 +154,11 @@ export default function CustomizedThailandTravel() {
                                 All MICE programs are customized based on group size, objectives, and event requirements. 
                             </p>
                         </div>
+                        <div className="mt-12 text-center lg:text-center">
+          <button className="bg-green-700 hover:bg-green-800 transition text-white px-10 py-3 rounded-full font-medium">
+            Explore Golf Solutions
+          </button>
+        </div>
                     </div>
 
                     {/* RIGHT – Image */}
