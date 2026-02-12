@@ -5,7 +5,7 @@ export default function CustomizedThailandTravel() {
         <section className="relative w-full bg-white mb-16 sm:mb-20">
 
             {/* Hero Image */}
-            <div className="relative h-[420px] sm:h-[560px] lg:h-[760px] w-full overflow-hidden">
+            <div className="relative h-[420px] sm:h-[560px] lg:h-[780px] w-full overflow-hidden">
                 <Image
                     src="/Travel_Herobanner.jpg"
                     alt="Customized Thailand Travel"
@@ -42,7 +42,7 @@ export default function CustomizedThailandTravel() {
                         Customized Thailand Travel
                     </h1>
 
-                     <div className="mx-auto mt-4 h-[2px] w-10 rounded-full bg-green-00/40" />
+                     <div className="mx-auto mt-4 h-[2px] w-12 rounded-full bg-green-500/30" />
 
                     {/* HERO DESCRIPTION */}
                     <p
@@ -82,7 +82,7 @@ export default function CustomizedThailandTravel() {
                     Sample Program | Cultural & Leisure Thailand Journey
                 </h2>
 
-                <div className="mx-auto mt-2 h-[2px] w-16 bg-blue-500/20" />
+                <div className="mx-auto mt-4 h-[2px] w-12 rounded-full bg-green-500/30" />
 
                 {/* Content */}
                 <div className="mt-12 sm:mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">

@@ -32,7 +32,7 @@ export default function CustomizedThailandTravel() {
     <section className="w-full bg-white">
 
       {/* ================= HERO ================= */}
-      <div className="relative h-[420px] sm:h-[560px] lg:h-[760px] w-full overflow-hidden">
+      <div className="relative h-[420px] sm:h-[560px] lg:h-[780px] w-full overflow-hidden">
         <Image
           src="/Golf_HeroBanner.jpg"
           alt="Golf Tour Solutions"

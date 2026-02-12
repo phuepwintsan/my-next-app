@@ -236,7 +236,7 @@ function ServicesDropdown({ pathname }) {
             Golf Tour Solutions
           </ServiceItem>
 
-          <ServiceItem href="/services/mice-corporate-travel">
+          <ServiceItem href="/mice-service">
             MICE & Corporate Travel Services
           </ServiceItem>
 
