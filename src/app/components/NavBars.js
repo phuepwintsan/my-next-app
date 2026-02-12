@@ -244,7 +244,7 @@ function ServicesDropdown({ pathname }) {
             Transportation & On-ground Logistics
           </ServiceItem>
 
-          <ServiceItem href="/services/local-coordination">
+          <ServiceItem href="/local-service">
             Local Coordination & Supplier Management
           </ServiceItem>
         </ul>
