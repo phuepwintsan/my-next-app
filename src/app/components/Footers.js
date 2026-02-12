@@ -93,7 +93,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/local-coordination"
+                href="/local-service"
                 className="hover:text-white/95 transition cursor-pointer block"
               >
                 Local Coordination & Supplier Management
