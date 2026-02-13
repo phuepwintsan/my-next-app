@@ -27,7 +27,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {[
               { name: "Home", href: "/" },
-              { name: "Our Services", href: "#" },
               { name: "Gallery", href: "/gallery" },
               { name: "About Us", href: "/about-us" },
               { name: "For Oversea Partners", href: "oversea-partner" },

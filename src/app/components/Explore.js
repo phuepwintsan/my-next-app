@@ -30,7 +30,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-18">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Heading */}
