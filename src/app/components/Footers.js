@@ -30,7 +30,7 @@ export default function Footer() {
               { name: "Our Services", href: "#" },
               { name: "Gallery", href: "/gallery" },
               { name: "About Us", href: "/about-us" },
-              { name: "Member Registration", href: "#" },
+              { name: "For Oversea Partners", href: "oversea-partner" },
               { name: "Contact Us", href: "/contact-us" },
             ].map((item) => (
               <li key={item.name}>
