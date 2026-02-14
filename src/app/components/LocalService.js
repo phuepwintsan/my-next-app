@@ -48,47 +48,45 @@ export default function LocalCoordinationHero() {
                     </p>
 
                     {/* ===== NETWORK BOX ===== */}
-                    <div className="mt-12 flex justify-center">
-                        <div className="w-full max-w-3xl bg-white border border-[#5B8BD9] rounded-md py-16 px-10 relative">
+                    <div className="mt-10 sm:mt-12 flex justify-center">
+                        <div className="w-full max-w-3xl bg-white border border-[#5B8BD9] rounded-md py-12 sm:py-16 px-6 sm:px-10 relative">
 
-                            <div className="relative w-full h-[260px] flex items-center justify-center">
+                            <div className="relative w-full h-[220px] sm:h-[260px] flex items-center justify-center">
 
                                 {/* TOP */}
-                                <div className="absolute top-[-10%] left-1/2 -translate-x-1/2">
-                                    <Image src="/landmark.svg" alt="Landmark" width={50} height={50} />
+                                <div className="absolute top-[-6%] sm:top-[-10%] left-1/2 -translate-x-1/2">
+                                    <Image src="/landmark.svg" alt="Landmark" width={40} height={40} className="sm:w-[50px] sm:h-[50px]" />
                                 </div>
 
-                                {/* LEFT (Moved inward) */}
-                                <div className="absolute left-[12%] top-1/2 -translate-y-1/2">
-                                    <Image src="/building.svg" alt="Building" width={50} height={50} />
+                                {/* LEFT */}
+                                <div className="absolute left-[8%] sm:left-[12%] top-1/2 -translate-y-1/2">
+                                    <Image src="/building.svg" alt="Building" width={40} height={40} className="sm:w-[50px] sm:h-[50px]" />
                                 </div>
 
-                                {/* RIGHT (Moved inward) */}
-                                <div className="absolute right-[12%] top-1/2 -translate-y-1/2">
-                                    <Image src="/hotel.svg" alt="Hotel" width={50} height={50} />
+                                {/* RIGHT */}
+                                <div className="absolute right-[8%] sm:right-[12%] top-1/2 -translate-y-1/2">
+                                    <Image src="/hotel.svg" alt="Hotel" width={40} height={40} className="sm:w-[50px] sm:h-[50px]" />
                                 </div>
 
                                 {/* BOTTOM */}
-                                <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2">
-                                    <Image src="/handshake.svg" alt="Handshake" width={55} height={55} />
+                                <div className="absolute bottom-[-6%] sm:bottom-[-10%] left-1/2 -translate-x-1/2">
+                                    <Image src="/handshake.svg" alt="Handshake" width={45} height={45} className="sm:w-[55px] sm:h-[55px]" />
                                 </div>
 
-                                {/* CENTER LOGO CARD */}
-                                <div className="bg-white rounded-xl shadow-[0_12px_25px_rgba(0,0,0,0.14)] px-8 py-5">
+                                {/* CENTER LOGO */}
+                                <div className="bg-white rounded-xl shadow-[0_12px_25px_rgba(0,0,0,0.14)] px-6 sm:px-8 py-4 sm:py-5">
                                     <Image
                                         src="/logo_Eng.jpg"
                                         alt="Thai Scenery"
-                                        width={180}
-                                        height={60}
+                                        width={150}
+                                        height={50}
+                                        className="sm:w-[180px]"
                                     />
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
-
-
 
                 </div>
 
